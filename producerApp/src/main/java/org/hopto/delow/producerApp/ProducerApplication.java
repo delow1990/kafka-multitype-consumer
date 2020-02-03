@@ -20,8 +20,7 @@ public class ProducerApplication implements CommandLineRunner {
     private final ProducerService producerService;
 
 //    After app start we send these messages to kafka topic. Spring will serialize these messages as JSON and add type
-//    value information to message headers so that it will be possible to deserialize them. See application.yml for type
-//    mapping definition
+//    value information to message headers so that it will be possible to deserialize them.
     @Override
     public void run(String... args) throws Exception {
         producerService.sendCreateMessage("First created");
